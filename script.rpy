@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define maria = Character("Maria")
+define interviewer = Character("Interviewer")
 init python:
     showered = 0
     teethbrushed = 0
@@ -37,9 +37,9 @@ label start:
 
     # Yawning sound
     "(yawns) I'm late!"
-    "I have to get ready for my date quickly! But I don't have enough time to get everything ready..."
+    "I have to get ready for my interview quickly! But I don't have enough time to get everything ready..."
     # Show list of things to do to get ready
-    "It's 9:00 right now. I'll have to leave the house by 9:10 to get to my date on time."
+    "It's 9:00 right now. I'll have to leave the house by 9:10 to get to my interview on time."
     "I'll have to sacrifice some things, but what?"
     jump shower
 
@@ -125,69 +125,26 @@ label clothes:
 
 label date:
     scene bg restaurant with fade
+    '''
     if showered == 0:
         if teethbrushed == 0:
             if combed == 0:
                 if changed == 0:
-                    show maria smile at center
-                    maria "Hey, it's nice to see you so early..."
-                    show maria normal at center
-                    maria "..."
-                    maria "Did you even get ready for this?"
-                    maria "It looks like you just woke up!"
-                    maria "That's it! We're done!"
+                    pass
                     jump bad
                 elif changed == 1:
-                    show maria smile at center
-                    maria "Hey, it's nice to see you so early..."
-                    show maria normal at center
-                    maria "..."
-                    maria "Did you even get ready for this?"
-                    maria "All you did was change your clothes!"
-                    maria "That's it! We're done!"
-                    jump bad
+                    pass
             elif combed == 1:
                 if changed == 0:
-                    show maria smile at center
-                    maria "Hey, it's nice to see you so early..."
-                    show maria normal at center
-                    maria "..."
-                    maria "Did you even get ready for this?"
-                    maria "You're still in your PJS, and you stink!"
-                    maria "That's it! We're done!"
-                    jump bad
+                    pass
                 elif changed == 1:
-                    show maria giggle at center
-                    maria "Perfect timing! You arrived just when I did!"
-                    show maria normal at center
-                    maria "..."
-                    maria "Do you smell that?"
-                    "Smell what?"
-                    maria "I think it's you..."
-                    maria "Especially your breath..."
-                    maria "I'm sorry, but I have to leave..."
-                    jump bad
+                    pass
         elif teethbrushed == 1:
             if combed == 0:
                 if changed == 0:
-                    show maria smile at center
-                    maria "Hey, it's nice to see you so early..."
-                    show maria normal at center
-                    maria "..."
-                    maria "Did you even get ready for this?"
-                    maria "It looks like you just woke up!"
-                    maria "That's it! We're done!"
-                    jump bad
+                    pass
                 elif changed == 1:
-                    show maria giggle at center
-                    maria "Perfect timing! You arrived just when I did!"
-                    show maria normal at center
-                    maria "..."
-                    maria "Do you smell that?"
-                    "Smell what?"
-                    maria "Hmm... I'm not sure."
-                    maria "Hey, your hair looks pretty cool."
-                    jump mid
+                    pass
             elif combed == 1:
                 if changed == 0:
                     pass
@@ -216,6 +173,7 @@ label date:
                     pass
                 elif changed == 1:
                     pass
+    '''
 
 label bad:
     scene bg bedroom with fade
